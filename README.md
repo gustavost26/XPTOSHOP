@@ -16,7 +16,7 @@
 [![metamask_connection.png](https://i.postimg.cc/kX7vZjyv/Captura-de-ecra-2024-10-13-a-s-13-45-39.png)](https://postimg.cc/dDSCZjph) [![metamask_permission.png](https://i.postimg.cc/BQNBGxY9/Captura-de-ecra-2024-10-13-a-s-13-46-01.png)](https://postimg.cc/D8JXrb3B)
 
 
-[![metamask_connection.png](https://i.postimg.cc/FFyxTt0K/Captura-de-ecra-2024-10-13-a-s-13-46-50.png)](https://postimg.cc/3WwpwcSM) [![metamask_permission.png](https://i.postimg.cc/6qfLqRBZ/Captura-de-ecra-2024-10-13-a-s-13-47-57.png)](https://postimg.cc/BPt1wjLZ)
+[![metamask_connection.png](https://i.postimg.cc/FFyxTt0K/Captura-de-ecra-2024-10-13-a-s-13-46-50.png)](https://postimg.cc/3WwpwcSM) [![metamask_permission.png](https://i.postimg.cc/rmND7RxZ/Captura-de-ecra-2024-10-13-a-s-18-45-18.png)](https://postimg.cc/phyVFT0K)
 
 [![metamask_connection.png](https://i.postimg.cc/Dz4rsR2n/Captura-de-ecra-2024-10-13-a-s-13-47-09.png)](https://postimg.cc/JymHC6D2)
 
@@ -158,8 +158,8 @@ Abra `http://localhost:3000` para ver o aplicativo.
 # Contrato Inteligente
 O contrato inteligente está implantado na rede Amoy Testnet.
 
-- **Endereço do Contrato**: `0xbC75754091A0bd199Fdd85D744f11672116c207B`
-- **Polygonscan**: [Ver Contrato no Polygonscan](https://amoy.polygonscan.com/address/0xbC75754091A0bd199Fdd85D744f11672116c207B)
+- **Endereço do Contrato**: `0xe519e0692ffA19ca2430A427CFcceC0b6AF5C201`
+- **Polygonscan**: [Ver Contrato no Polygonscan](0xe519e0692ffA19ca2430A427CFcceC0b6AF5C201)
 
 
 ---
