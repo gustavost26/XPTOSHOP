@@ -28,11 +28,6 @@ h1, h2 {
   color: #D7F9FF;
 }
 
-header, footer {
-  background-color: #2BDEFD;
-  color: white;
-}
-
 a {
   color: #2BDEFD;
   text-decoration: none;
@@ -57,4 +52,8 @@ a:hover {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.h25 {
+  height: 25px;
 }

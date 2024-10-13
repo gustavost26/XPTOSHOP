@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { toast } from "react-toastify";
 
-const tokenAddress = '0x3f0af63F73AFe2C5f084e1C48B94C13b255867bA';
+const tokenAddress = '0xe519e0692ffA19ca2430A427CFcceC0b6AF5C201';
 const tokenABI = [
   "function balanceOf(address owner) view returns (uint256)"
 ];

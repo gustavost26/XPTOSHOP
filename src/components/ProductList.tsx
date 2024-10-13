@@ -1,5 +1,8 @@
 'use client';
+import { AuthContext } from "@/contexts/AuthContext";
 import { buyProduct } from "@/lib/token";
+import { connectWallet } from "@/lib/wallet";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 type Product = {
@@ -15,7 +18,7 @@ const products: Product[] = [
     id: 1,
     name: "Tênis de Corrida",
     description: "Tênis de corrida confortável e resistente.",
-    price: 0,
+    price: 12,
     imageUrl: "/products/tenis.jpg",
   },
   {
@@ -77,14 +80,21 @@ const products: Product[] = [
 ];
 
 const ProductList = () => {
+
+  const { account, setBalance } = useContext(AuthContext);
+
   const handleBuy = async (price: number) => {
     const accounts = await window.ethereum.request({
         method: 'eth_requestAccounts',
     });
+
     const address = accounts[0];
     try {
         const result = await buyProduct(address, price);
         if (result.isSuccess) {
+            const { balance } = await connectWallet();
+            setBalance(balance);
+            localStorage.setItem("balance", balance);
             toast.success(`Sucesso! Sua transação foi confirmada ${result.txHash}`);
         } else {
             toast.error(`Ocorreu um erro: ${result.error}`);
@@ -103,15 +113,19 @@ const ProductList = () => {
             <h2 className="text-xl font-bold mt-4">{product.name}</h2>
             <p className="text-gray-600">{product.description}</p>
           </div>
-          <div className="flex justify-between items-center p-4">
-            <p className="text-green-500 font-bold">$ {product.price} BTK</p>
-            <button
-              onClick={() => handleBuy(product.price)}
-              className="bg-[#2BFDBE] text-[#01080E] py-2 px-4 rounded mt-4"
-            >
-              Comprar
-            </button>
-          </div>
+          { account ? (
+            <div className="flex justify-between items-center p-4">
+              <p className="text-green-500 font-bold">$ {product.price} KPT</p>
+              <button
+                onClick={() => handleBuy(product.price)}
+                className="bg-[#2BFDBE] text-[#01080E] py-2 px-4 rounded mt-4"
+              >
+                Comprar
+              </button>
+            </div>
+          ) : <></>
+          }
+          
         </div>
       ))}
     </div>
