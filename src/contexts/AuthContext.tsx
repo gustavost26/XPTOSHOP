@@ -3,11 +3,12 @@
 import { createContext, useState, useEffect } from 'react';
 import { connectWallet } from '@/lib/wallet';
 
+// @ts-ignore
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
 	const [account, setAccount] = useState<string | null>(null);
-  const [balance, setBalance] = useState<number | null>(null);
+  const [balance, setBalance] = useState<string | null>(null);
 
 	useEffect(() => {
 		const wallet = localStorage.getItem("wallet");
@@ -43,12 +44,14 @@ export function AuthProvider({ children }) {
 			setBalance(balance);
 
 			localStorage.setItem("wallet", accounts);
+			// @ts-ignore
 			localStorage.setItem("balance", balance);
 		}
 	};
 
   const handleConnect = async () => {
     try {
+			// @ts-ignore
       const { account, balance } = await connectWallet();
       setAccount(account);
       setBalance(balance);

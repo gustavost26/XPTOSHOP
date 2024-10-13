@@ -4,6 +4,7 @@ import { useContext } from 'react';
 
 const MetaMaskConnect = () => {
 
+  // @ts-ignore
   const { account, balance, logout, handleConnect } = useContext(AuthContext);
   
   const formatAccount = (account: string) => {

@@ -253,7 +253,8 @@ Se você encontrar problemas ao executar o aplicativo, tente as seguintes etapas
 
 - **Melhorias**:
    - Melhorar a responsividade em dispositivos móveis.
-   - Melhorar o tratamento de erros.
+   - Melhorar o tratamento de erros do toast.
+   - Melhorar o tratamento de erros do Typescript onde estão adicionado o: // @ts-ignore
 - **Funcionalidades Avançadas**:
    - Adicionar suporte a outras criptomoedas.
 

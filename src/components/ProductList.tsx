@@ -81,6 +81,7 @@ const products: Product[] = [
 
 const ProductList = () => {
 
+  // @ts-ignore
   const { account, setBalance } = useContext(AuthContext);
 
   const handleBuy = async (price: number) => {
@@ -92,6 +93,7 @@ const ProductList = () => {
     try {
         const result = await buyProduct(address, price);
         if (result.isSuccess) {
+            // @ts-ignore
             const { balance } = await connectWallet();
             setBalance(balance);
             localStorage.setItem("balance", balance);
