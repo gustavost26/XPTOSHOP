@@ -1,4 +1,4 @@
-import { useContext } from "react";
+/*import { useContext } from "react";
 
 import { AuthProvider } from "@/contexts/AuthContext";
 
@@ -10,4 +10,4 @@ export default function useAppContext() {
   }
 
   return context;
-}
+}*/
